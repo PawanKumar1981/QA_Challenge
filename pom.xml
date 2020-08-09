@@ -1,0 +1,98 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.flightbookingportal.assignment</groupId>
+	<artifactId>com.spicejetportal.assignment</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<description>Creating a framework for flightbooking Anblick Solutions Pvt Ltd</description>
+<properties>
+		<cucumber.version>4.2.0</cucumber.version>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<maven.compiler.source>1.8</maven.compiler.source>
+		<maven.compiler.target>1.8</maven.compiler.target>
+	</properties>
+  
+  	<build>
+		<plugins>
+			<plugin>
+				<artifactId>maven-surefire-plugin</artifactId>
+				<version>3.0.0-M3</version>
+				<configuration>
+				
+					<!--<suiteXmlFiles>  -->
+						<!--<suiteXmlFile>testng.xml</suiteXmlFile>  -->
+					<!--</suiteXmlFiles>  -->
+					 <parallel>methods</parallel>
+					<threadCount>2</threadCount>
+					<perCoreThreadCount>false</perCoreThreadCount>
+
+                     <!--<includes>
+					 <include>**/*Runner.java</include>
+					 </includes>-->
+					<!-- <useUnlimitedThreads>true</useUnlimitedThreads> -->
+					<!--<argLine>-Xmx1024m -XX:MaxPermSize=256m</argLine>-->
+				</configuration>
+			
+					
+			</plugin>
+		</plugins>
+	</build>
+	
+  	<!-- For Cucumber -->
+	<dependencies>
+		<dependency>
+			<groupId>io.cucumber</groupId>
+			<artifactId>cucumber-java</artifactId>
+			<version>${cucumber.version}</version>
+			<scope>test</scope>
+		</dependency>
+ 
+		<dependency>
+			<groupId>io.cucumber</groupId>
+			<artifactId>cucumber-junit</artifactId>
+			<version>${cucumber.version}</version>
+			<scope>test</scope>
+		</dependency>
+ 
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>4.13</version>
+			<scope>test</scope>
+		</dependency>
+ 
+ 
+ 
+		<!-- For dependency Injection -->
+ 
+		<dependency>
+			<groupId>io.cucumber</groupId>
+			<artifactId>cucumber-picocontainer</artifactId>
+			<version>${cucumber.version}</version>
+			<scope>test</scope>
+		</dependency>
+ 
+        	<dependency>
+			<groupId>org.seleniumhq.selenium</groupId>
+			<artifactId>selenium-java</artifactId>
+			<version>3.14.0</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.testng</groupId>
+			<artifactId>testng</artifactId>
+			<version>6.14.3</version>
+			<scope>compile</scope>
+		</dependency>
+	       <!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-testng -->
+        <dependency>
+            <groupId>io.cucumber</groupId>
+            <artifactId>cucumber-testng</artifactId>
+            <version>6.4.0</version>
+        </dependency>
+		</dependencies>
+
+
+
+</project>

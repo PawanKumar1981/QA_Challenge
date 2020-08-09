@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: flightprotal.testrunner.TestRunner
+-------------------------------------------------------------------------------
+Tests run: 0, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.752 s - in flightprotal.testrunner.TestRunner
